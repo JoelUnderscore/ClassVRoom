@@ -19,3 +19,10 @@ El equipo ha sido compuesto por 3 alumnos de DAW del instituto Esteve Terradas i
 * Carlos Valenzuela
   * [Github](https://github.com/carlosvalgar) 
   * [Discord: Carvagia#1404]
+
+# Instalación docker
+```bash
+apt-get install docker.io docker-compose
+´´´
+# Instalación con docker-compose
+
