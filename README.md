@@ -19,3 +19,34 @@ El equipo ha sido compuesto por 3 alumnos de DAW del instituto Esteve Terradas i
 * Carlos Valenzuela
   * [Github](https://github.com/carlosvalgar) 
   * [Discord: Carvagia#1404]
+
+# Instalación docker
+```
+apt-get install docker.io docker-compose
+```
+
+Después tenemos que crear el archivo db.sqlite3 para poder hacer el migrate cuando hayamos levantado el docker.
+
+```
+touch db.sqlite3
+```
+
+Una vez hecho levantamos el docker-compose.
+
+```
+docker-compose up -d --build
+```
+
+Lo siguiente es entrar dentro del docker para ello necesitamos saber la ID de este lo hacemos así.
+
+```
+docker ps
+```
+
+Y ejecutamos el siguiente comando
+
+```
+docker exec -ti <primeros 3 letras/números del docker> bash
+```
+
+Una vez dentro hacemos ./manage.py migrate y ./manage.py creategroups.
